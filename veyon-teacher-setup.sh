@@ -10,8 +10,7 @@ VEYON_FILENAME=`basename ${VEYON_URL}`
 
 # 0. Install com2kids.deb
 echo "Install com2kids.deb"
-wget https://github.com/kittirak/com2kids/deb/com2kids.deb
-sudo dpkg -i com2kids.deb
+sudo dpkg -i com2kids/deb/com2kids.deb
 
 # 1. Install veyon depends
 sudo apt -y install libfakekey0 libqca-qt5-2 
@@ -34,10 +33,8 @@ sudo veyon-cli config set Authentication/Method 1
 sudo apt install -y python3-pip
 
 # install requirements
+echo "Install python require packages"
 pip install fastapi uvicorn uvloop httptools==0.1.2
-
-echo "get server.py"
-wget https://github.com/kittirak/com2kids/server.py
 
 # 5. set FQDN
 read -p "Please specify FQDN :" FQDN
@@ -45,4 +42,5 @@ echo "hostnamectl set-hostname ${FQDN}"
 hostnamectl set-hostname ${FQDN}
 
 # 6. run server
-uvicorn server:app --host 0.0.0.0 --port 8000
+echo "start server.py"
+uvicorn com2kids/server:app --host 0.0.0.0 --port 8000
