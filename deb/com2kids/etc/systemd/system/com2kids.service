@@ -1,0 +1,12 @@
+[Unit]
+Description=Log machine usage on Startup and Shutdown
+DefaultDependencies=no
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/local/bin/com2kids-stat.py --startup
+ExecStop=/usr/bin/python3 /usr/local/bin/com2kids-stat.py --shutdown
+
+[Install]
+WantedBy=multi-user.target

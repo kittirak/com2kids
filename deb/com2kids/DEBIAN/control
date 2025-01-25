@@ -1,0 +1,8 @@
+Package: com2kids
+Version: 1.0-2
+Section: base
+Priority: optional
+Architecture: all
+Depends: curl
+Maintainer: Kittirak Moungmingsuk <kittirak@yahoo.com>
+Description: com2kids package

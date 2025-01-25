@@ -1,0 +1,13 @@
+#!/bin/sh
+
+ln -s /usr/share/applications/eDLTV.desktop /home/com2kids/Desktop/
+ln -s /usr/share/applications/project14.desktop /home/com2kids/Desktop/
+ln -s /usr/share/applications/ChulaMOOC.desktop /home/com2kids/Desktop/
+ln -s /usr/share/applications/ThaiMOOC.desktop /home/com2kids/Desktop/
+
+chown com2kids:com2kids /home/com2kids/Desktop/*
+
+sudo -u com2kids gio set /home/com2kids/Desktop/eDLTV.desktop metadata::trusted true
+sudo -u com2kids gio set /home/com2kids/Desktop/project14.desktop metadata::trusted true
+sudo -u com2kids gio set /home/com2kids/Desktop/ChulaMOOC.desktop metadata::trusted true
+sudo -u com2kids gio set /home/com2kids/Desktop/ThaiMOOC.desktop metadata::trusted true

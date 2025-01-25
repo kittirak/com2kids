@@ -1,0 +1,11 @@
+#!/bin/sh
+
+rm -f /usr/share/applications/eDLTV.desktop
+rm -f /usr/share/applications/project14.desktop
+rm -f /usr/share/applications/ChalaMOOC.desktop
+rm -f /usr/share/applications/ThaiMOOC.desktop
+
+rm -f /home/com2kids/Desktop/eDLTV.desktop
+rm -f /home/com2kids/Desktop/project14.desktop
+rm -f /home/com2kids/Desktop/ChulaMOOC.desktop 
+rm -f /home/com2kids/Desktop/ThaiMOOC.desktop 

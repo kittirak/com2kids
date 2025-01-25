@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=eDLTV
+Type=Application
+Exec=firefox https://dltv.ac.th/
+Icon=eDLTV

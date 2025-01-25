@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=ChulaMOOC
+Type=Application
+Exec=firefox https://mooc.chula.ac.th/
+Icon=ChulaMOOC
