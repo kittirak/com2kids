@@ -6,11 +6,15 @@ if [ -z "$1" ] ; then
   exit 1
 fi
 
-# 1. Install veyon (download from teacher host)
+# 0. Install com2kids.deb
+echo "Install com2kids.deb"
+sudo dpkg -i com2kids/deb/com2kids.deb
 
-# install depends
+# 1. Install veyon (download from teacher host)
+# 1.1 Install depends
 sudo apt -y install libfakekey0 libqca-qt5-2 
 
+# 1.2 Download veyon from teacher host and install
 echo "curl -OJ http://${1}:8000/download/veyon"
 VEYON_FILENAME=$(curl -OJ http://${1}:8000/download/veyon 2>&1 | grep -oP "(?<=Saved to filename ').*(?=')")
 mv ${VEYON_FILENAME} ${HOME}/Downloads

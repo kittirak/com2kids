@@ -17,11 +17,11 @@ sudo apt -y install libfakekey0 libqca-qt5-2
 
 # 2. Download and install veyon
 echo "install ${VEYON_FILENAME}"
-if [ ! -f /home/com2kids/Downloads/${VEYON_FILENAME} ]; then
-  wget -O /home/com2kids/Downloads/${VEYON_FILENAME} ${VEYON_URL}
+if [ ! -f ${HOME}/Downloads/${VEYON_FILENAME} ]; then
+  wget -O ${HOME}/Downloads/${VEYON_FILENAME} ${VEYON_URL}
 fi
 
-sudo dpkg -i /home/com2kids/Downloads/${VEYON_FILENAME} 
+sudo dpkg -i ${HOME}/Downloads/${VEYON_FILENAME} 
 
 # 3. create com2kids key pair to directory 
 sudo veyon-cli authkeys create com2kids
