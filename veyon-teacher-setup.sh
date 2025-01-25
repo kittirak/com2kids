@@ -36,7 +36,8 @@ sudo apt install -y python3-pip
 # install requirements
 pip install fastapi uvicorn uvloop httptools==0.1.2
 
-echo "wget https://github.com/kittirak/com2kids/server.py"
+echo "get server.py"
+wget https://github.com/kittirak/com2kids/server.py
 
 # 5. set FQDN
 read -p "Please specify FQDN :" FQDN
