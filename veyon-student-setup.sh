@@ -13,9 +13,9 @@ sudo apt -y install libfakekey0 libqca-qt5-2
 
 echo "curl -OJ http://${1}:8000/download/veyon"
 VEYON_FILENAME=$(curl -OJ http://${1}:8000/download/veyon 2>&1 | grep -oP "(?<=Saved to filename ').*(?=')")
-mv ${VEYON_FILENAME} /home/com2kids/Downloads
+mv ${VEYON_FILENAME} ${HOME}/Downloads
 echo "Install Veyon (${VEYON_FILENAME})"
-sudo dpkg -i /home/com2kids/Downloads/${VEYON_FILENAME}
+sudo dpkg -i ${HOME}/Downloads/${VEYON_FILENAME}
 
 # 2. Set public key (retrive from teacher host)
 sudo mkdir -p /etc/veyon/keys/public/com2kids
