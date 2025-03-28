@@ -30,7 +30,7 @@ sudo veyon-cli authkeys create com2kids
 sudo veyon-cli config set Authentication/Method 1
 
 # 3.1 create location
-veyon-cli networkobjects add location "Computer Room"
+sudo veyon-cli networkobjects add location "Computer Room"
 
 # 4. install server app python requirement
 sudo apt install -y python3-pip
