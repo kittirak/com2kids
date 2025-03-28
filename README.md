@@ -6,12 +6,14 @@
 - ติดตั้ง python package สำหรับรันเซิร์ฟเวอร์เพื่อแชร์ไฟล์ veyon, public key และข้อมูลให้สำหรับติดตั้งและคอนฟิกเครื่องผู้เรียน พร้อมทั้งรับข้อมูล IP จากเครื่องผู้เรียนมาสร้างรายการเครื่องคอมพิวเตอร์ให้โดยอัตโนมัติ
 - ให้กำหนด hostname แบบ FQDN พิจารณาใช้ชื่อโรงเรียนเป็นโดเมน** สำคัญส่วนนี้จะใช้สำหรับเก็บสถิติการใช้งาน และโดเมนจะถูกนำไปใช้กำหนดให้เครื่องผู้เรียนด้วย
 ```
+sudo apt update
 git clone https://github.com/kittirak/com2kids.git
 ./com2kids/veyon-teacher-setup.sh
 ```
 
 2. เมื่อ**เครื่องผู้เรียน**เชื่อมต่อเครือข่าย คุยกับเครื่องผู้สอนได้ รันสคริปต์ veyon-student-setup.sh [IP เครื่องผู้สอน] เช่น 
 ```
+sudo apt update
 wget https://raw.githubusercontent.com/kittirak/com2kids/master/veyon-student-setup.sh
 chmod +x veyon-student-setup.sh
 ./veyon-student-setup.sh 10.0.2.251 
