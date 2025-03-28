@@ -38,7 +38,6 @@ sudo apt install -y python3-pip
 # install requirements
 echo "Install python require packages"
 pip install fastapi uvicorn uvloop httptools==0.1.2
-sudo apt install -y uvicorn
 
 # 5. set FQDN
 read -p "Please specify FQDN :" FQDN
