@@ -25,6 +25,8 @@ sudo dpkg -i ${HOME}/Downloads/${VEYON_FILENAME}
 
 # 3. create com2kids key pair to directory 
 sudo veyon-cli authkeys create com2kids
+sudo veyon-cli authkeys setaccessgroup com2kids/private com2kids
+sudo veyon-cli authkeys setaccessgroup com2kids/public	com2kids
 
 # set authentication method to key
 sudo veyon-cli config set Authentication/Method 1
