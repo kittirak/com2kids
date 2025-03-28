@@ -44,7 +44,8 @@ pip install fastapi uvicorn uvloop httptools==0.1.2
 # 5. set FQDN
 read -p "Please specify FQDN :" FQDN
 echo "hostnamectl set-hostname ${FQDN}"
-hostnamectl set-hostname ${FQDN}
+sudo hostnamectl set-hostname ${FQDN}
+sudo sed -i -E "s/^(127\.0\.1\.1\s+)[^ ]+/\1${FQDN}/" /etc/hosts
 
 # 6. run server
 echo "start server.py"

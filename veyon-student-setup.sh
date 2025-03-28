@@ -45,3 +45,4 @@ NEW_HOSTNAME=`curl -X POST "http://${1}:8000/client/config" -H "Content-Type: ap
 # 5. Set hostname (essentail for usage statistics)
 echo "Set hostname (FQDN) $NEW_HOSTNAME"
 sudo hostnamectl set-hostname $NEW_HOSTNAME
+sudo sed -i -E "s/^(127\.0\.1\.1\s+)[^ ]+/\1$NEW_HOSTNAME/" /etc/hosts
