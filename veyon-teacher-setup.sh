@@ -29,6 +29,9 @@ sudo veyon-cli authkeys create com2kids
 # set authentication method to key
 sudo veyon-cli config set Authentication/Method 1
 
+# 3.1 create location
+veyon-cli networkobjects add location "Computer Room"
+
 # 4. install server app python requirement
 sudo apt install -y python3-pip
 
@@ -43,4 +46,5 @@ hostnamectl set-hostname ${FQDN}
 
 # 6. run server
 echo "start server.py"
-uvicorn com2kids/server:app --host 0.0.0.0 --port 8000
+cd com2kids
+uvicorn server:app --host 0.0.0.0 --port 8000
