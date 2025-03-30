@@ -10,7 +10,7 @@ VEYON_FILENAME=`basename ${VEYON_URL}`
 
 # 0. Install com2kids.deb
 echo "Install com2kids.deb"
-sudo dpkg -i com2kids/deb/com2kids.deb
+sudo dpkg -i deb/com2kids.deb
 
 # 1. Install veyon depends
 sudo apt -y install libfakekey0 libqca-qt5-2 
