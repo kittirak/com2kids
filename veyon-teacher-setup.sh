@@ -49,5 +49,4 @@ sudo sed -i -E "s/^(127\.0\.1\.1\s+)[^ ]+/\1${FQDN}/" /etc/hosts
 
 # 6. run server
 echo "start server.py"
-cd com2kids
 uvicorn server:app --host 0.0.0.0 --port 8000
