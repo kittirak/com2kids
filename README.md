@@ -8,7 +8,13 @@
 ```
 sudo apt update
 git clone https://github.com/kittirak/com2kids.git
-./com2kids/veyon-teacher-setup.sh
+cd com2kids
+./veyon-teacher-setup.sh
+```
+- ถ้าจะติดตั้งเครื่องเพิ่มเติมในภายหลังให้รันคำสั่งต่อไปนี้
+```
+cd com2kids
+uvicorn server:app --host 0.0.0.0 --port 8000
 ```
 
 2. เมื่อ**เครื่องผู้เรียน**เชื่อมต่อเครือข่าย คุยกับเครื่องผู้สอนได้ รันสคริปต์ veyon-student-setup.sh [IP เครื่องผู้สอน] เช่น 
@@ -18,7 +24,7 @@ wget https://raw.githubusercontent.com/kittirak/com2kids/master/veyon-student-se
 chmod +x veyon-student-setup.sh
 ./veyon-student-setup.sh 10.0.2.251 
 ```
-สคริปต์จะไปดาวน์โหลด veyon จากเครื่องผู้สอนตามไอพีที่กำหนด ติดตั้ง คอนฟิก พร้อมทั้งลงทะเบียนไอพีไปยังเครื่องผู้สอน
+สคริปต์จะไปดาวน์โหลด veyon จากเครื่องผู้สอนตามไอพีที่กำหนด ติดตั้ง คอนฟิก พร้อมทั้งลงทะเบียนไอพีไปยังเครื่องผู้สอน เมื่อติดตั้งเสร็จ Logout แล้ว Login ใหม่สักครั้งเพื่อการทำงานที่สมบูรณ์ของ veyon 
 
 3. ทำตามข้อ 2 จนครบทุกเครื่องและให้ทำเรียงตามลำดับเครื่อง เพราะระบบจะรันชื่อเครื่องตามลำดับในรูปแบบ student1, student2 ..
 
