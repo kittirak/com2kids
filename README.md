@@ -1,4 +1,5 @@
 # Veyon installation scripts
+# test on Zorin OS education 16.3
 ## ลำดับการติดตั้ง
 1. เมื่อ**เครื่องผู้สอน**ต่ออินเทอร์เน็ตได้ ให้รันสคริปต์ veyon-teacher-setup.sh ในสคริปต์จะ
 - ไปดาวน์โหลด veyon_4.8.3.0-ubuntu.focal_amd64.deb (ใช้กับ Zorin 16, Ubuntu 20.04) มาวางใน Downloads 
